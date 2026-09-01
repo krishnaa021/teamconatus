@@ -29,5 +29,5 @@ This site is deployed using [Vercel](https://vercel.com).
 
 ## 📫 Contact
 * **GitHub:** [@krishnaa021](https://github.com/krishnaa021)
-* **Email:** [krishnayadav8856@gmail.com](krishnayadav8856@gmail.com)
-* **LinkedIn:** [https://www.linkedin.com/in/krishna-yadav-994430381/](Krishna-Yadav)
+* **Email:** krishnayadav8856@gmail.com
+* **LinkedIn:** [https://www.linkedin.com/in/krishna-yadav-994430381/](https://www.linkedin.com/in/krishna-yadav-994430381/)
