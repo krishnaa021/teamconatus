@@ -326,3 +326,24 @@ nav {
         color: #007BFF;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .timeline::after {
+        left: 15px;
+    }
+    .timeline-item {
+        padding-left: 40px;
+    }
+    .timeline-dot {
+        left: 5px;
+    }
+}
