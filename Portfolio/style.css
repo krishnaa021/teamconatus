@@ -75,7 +75,7 @@ header {
     position: fixed;
     width: 100%;
     background: #121212;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
     z-index: 1000;
 }
 
@@ -89,7 +89,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #e9ecf0;
+    color: #ffea02;
 }
 
 .nav-links {
@@ -124,20 +124,22 @@ nav {
     margin: 5px;
 }
 
-/* Hero Section */
 .hero {
     background-color: #101010;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     text-align: center;
     background: linear-gradient(to right, #151515, #151515);     
-    padding: 0 20px;
-    position: relative;      
+    padding: 0 40px;
+    position: relative;
+    overflow: hidden;
 }
 
+
 .hero-content{
+    
     color:white;
 }
 
@@ -149,6 +151,34 @@ nav {
 .hero p {
     font-size: 1.5rem;
     color: #ffffff;
+}
+
+.hero-image img{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    border: 2px solid rgb(247, 247, 0); 
+    margin-right: auto;
+    /* padding-right: 80px; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+floating-photo {
+    width: 220px;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 30px; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 
 /* About Section */
@@ -370,7 +400,7 @@ nav {
 
     .footer-links a:hover {
         padding-left: 0;
-        color: #007BFF;
+        color: #eaff00;
     }
 }
 
@@ -414,5 +444,45 @@ nav {
     .menu-checkbox:checked + .burger .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
         transition: all 0.3s ease;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse; /* Stacks the photo on top of the text on phones */
+        text-align: center;
+        margin-top: 80px;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .floating-photo {
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+}
+
+@supports (animation-timeline: view()) {
+    
+    @keyframes scrollReveal {
+        from {
+            opacity: 0;
+            transform: translateY(60px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .section-title, 
+    .about-content, 
+    .skill-card, 
+    .project-card, 
+    .timeline-item, 
+    .contact-info {
+        animation: scrollReveal linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 25%;
     }
 }
