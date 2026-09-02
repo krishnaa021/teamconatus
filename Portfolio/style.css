@@ -154,7 +154,7 @@ nav {
 }
 
 .hero-image img{
-    width: 300px;
+    width: 400px;
     height: 500px;
     display: flex;
     border: 2px solid rgb(247, 247, 0); 
@@ -235,7 +235,6 @@ floating-photo {
     width: 270px;
     height: 350px;
     padding: 24px 20px;
-    /* animation: 9s cubic-bezier(.4, 0, .2, 1) infinite mentorStackRotate; */
     display: flex;
     position: absolute;
     box-shadow: 0 4px 6px rgb(217, 255, 0);
@@ -370,7 +369,7 @@ floating-photo {
 
 .footer-links a:hover {
     color: #ffffff;
-    padding-left: 5px; /* Adds a nice little sliding effect on hover */
+    padding-left: 5px; 
 }
 
 .footer-bottom {
@@ -447,7 +446,7 @@ floating-photo {
     }
 
     .hero-content {
-        flex-direction: column-reverse; /* Stacks the photo on top of the text on phones */
+        flex-direction: column-reverse;
         text-align: center;
         margin-top: 80px;
     }
