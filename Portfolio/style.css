@@ -129,7 +129,7 @@ nav {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     text-align: center;
     background: linear-gradient(to right, #151515, #151515);     
     padding: 0 40px;
@@ -142,6 +142,7 @@ nav {
     
     color:white;
 }
+
 
 .hero h1 {
     font-size: 4rem;
@@ -156,7 +157,8 @@ nav {
 .hero-image img{
     width: 400px;
     height: 500px;
-    display: flex;
+    max-width: 90vw;
+    display: block;
     border-radius: 40px;
     border: 2px solid rgb(247, 247, 0); 
     margin-right: 40px;
@@ -207,7 +209,12 @@ nav {
     padding: 30px;
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(249, 249, 246);
+}
+
+.skill-card:hover{
     box-shadow: 0 4px 6px rgb(217, 255, 0);
+    transition: box-shadow 0.3s ease;
 }
 
 
@@ -215,11 +222,10 @@ nav {
 /* Projects Grid */
 .projects-grid {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    height: 420px;
 }
 
 .project-card {
@@ -236,7 +242,6 @@ nav {
     height: 350px;
     padding: 24px 20px;
     display: flex;
-    position: absolute;
     box-shadow: 0 4px 6px rgb(217, 255, 0);
 }
 
@@ -405,7 +410,7 @@ nav {
 
 @media screen and (max-width: 768px) {
     .nav-links {
-        position: absolute;
+        position: fixed;
         right: -100%; /* Hidden off-screen by default */
         top: 60px;
         background-color: #101010;
@@ -444,19 +449,19 @@ nav {
         transform: rotate(45deg) translate(-5px, -6px);
         transition: all 0.3s ease;
     }
+}
 
-    .hero-content {
+@media screen and (max-width: 768px) {
+    .hero {
         flex-direction: column-reverse;
         text-align: center;
         margin-top: 80px;
     }
-    
-    .hero-text {
-        text-align: center;
-    }
-    
-    .floating-photo {
-        max-width: 250px;
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+        margin-right: 0;
         margin-bottom: 30px;
     }
 }
