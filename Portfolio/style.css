@@ -73,10 +73,14 @@ body {
 /* Navigation */
 header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background: #121212;
     box-shadow: 0 2px 5px rgb(0, 0, 0);
     z-index: 1000;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 nav {
@@ -143,7 +147,6 @@ nav {
     color:white;
 }
 
-
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 10px;
@@ -165,17 +168,8 @@ nav {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 6px rgb(247, 248, 247);
-}
-
-
-/* floating-photo {
-    width: 220px;
-    width: 80%;
-    object-fit: cover;
-    border-radius: 30px; 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     animation: float 4s ease-in-out infinite;
-} */
+}
 
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -409,8 +403,12 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
     .nav-links {
-        position: fixed;
+        position: absolute;
         right: -100%; /* Hidden off-screen by default */
         top: 60px;
         background-color: #101010;
@@ -455,7 +453,6 @@ nav {
     .hero {
         flex-direction: column-reverse;
         text-align: center;
-        margin-top: 80px;
     }
 
     .hero-image img {
