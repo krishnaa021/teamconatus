@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Neon Police Chase 3D</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="game"></div>
+
+  <div id="hud">
+
+    <div class="logo">
+      NEON CHASE <span>3D</span>
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <span>SCORE</span>
+        <b id="score">0</b>
+      </div>
+
+      <div class="stat">
+        <span>SPEED</span>
+        <b id="speed">0 km/h</b>
+      </div>
+
+      <div class="stat">
+        <span>HEAT</span>
+        <b id="heat">0%</b>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="controls">
+    ← → STEER &nbsp; • &nbsp;
+    ↑ BOOST &nbsp; • &nbsp;
+    ↓ BRAKE
+  </div>
+
+
+  <div id="menu" class="show">
+
+    <div class="card">
+
+      <div class="tag">
+        THREE.JS ARCADE RACER
+      </div>
+
+      <h1>
+        POLICE<br>
+        <span>CHASE</span>
+      </h1>
+
+      <p>
+        Escape the police, dodge traffic
+        and survive as long as possible.
+      </p>
+
+      <button id="startBtn">
+        START CHASE
+      </button>
+
+      <small>
+        Use the arrow keys to drive.
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div id="gameover">
+
+    <div class="card">
+
+      <div class="tag">
+        GAME OVER
+      </div>
+
+      <h1>
+        <span id="goReason">CRASHED</span>
+      </h1>
+
+      <p>
+        Final score: <b id="finalScore">0</b>
+      </p>
+
+      <button id="restartBtn">
+        TRY AGAIN
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- YOUR GAME (imports three.js itself as an ES module) -->
+  <script type="module" src="game.js"></script>
+
+</body>
+</html>
