@@ -467,7 +467,7 @@ nav {
     
     @keyframes scrollReveal {
         from {
-            opacity: 0;
+            opacity: 0; 
             transform: translateY(60px);
         }
         to {
