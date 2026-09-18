@@ -2,8 +2,7 @@
 
 A small news app built with **React**, **Axios**, **React Router DOM**, and
 **Tailwind CSS**, pulling live articles from the **Guardian Open Platform**
-API. Built as a learning project, so the code favors clarity over
-cleverness.
+API.
 
 ## Features
 
