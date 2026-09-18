@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { wrap } from '../lib/layout.js'
 
-const CONTACT_EMAIL = 'hello@dispatchnews.app'
+const CONTACT_EMAIL = 'krishnayadav8856@gmail.com'
 
 export default function Contact() {
   return (
@@ -18,7 +18,6 @@ export default function Contact() {
         Questions, feedback, or spotted a bug? Reach out any time.
       </p>
 
-      
         <a href={`mailto:${CONTACT_EMAIL}`}
         className="text-lg font-semibold text-blue hover:underline"></a>
       
