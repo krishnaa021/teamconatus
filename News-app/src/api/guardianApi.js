@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-// Get a free key at https://open-platform.theguardian.com/access/
-// and put it in a ".env" file (see .env.example) as VITE_GUARDIAN_API_KEY.
+
 const API_KEY = import.meta.env.VITE_GUARDIAN_API_KEY
 
 const client = axios.create({
