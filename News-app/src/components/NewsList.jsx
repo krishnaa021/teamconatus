@@ -1,4 +1,5 @@
 import NewsItem from './NewsItem.jsx'
+import FeaturedArticle from './FeaturedArticle.jsx'
 import Loader from './Loader.jsx'
 import ErrorMessage from './ErrorMessage.jsx'
 
@@ -10,6 +11,7 @@ export default function NewsList({
   hasMore,
   onLoadMore,
   loadingMore,
+  featured = false,
 }) {
   if (error) {
     return <ErrorMessage message={error} onRetry={onRetry} />
@@ -27,10 +29,16 @@ export default function NewsList({
     )
   }
 
+  const [topStory, ...restArticles] = articles
+  const showFeatured = featured && Boolean(topStory)
+  const gridArticles = showFeatured ? restArticles : articles
+
   return (
     <>
+      {showFeatured && <FeaturedArticle article={topStory} />}
+
       <div className="grid grid-cols-1 gap-x-6 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article) => (
+        {gridArticles.map((article) => (
           <NewsItem key={article.id} article={article} />
         ))}
       </div>

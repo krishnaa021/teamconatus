@@ -23,18 +23,20 @@ export default function Header() {
         <span className="hidden sm:inline">Powered by the Guardian Open Platform</span>
       </div>
 
-      <div className={`${wrap} flex flex-wrap items-baseline gap-4 pb-3.5 pt-5`}>
+      <div className={`${wrap} flex flex-col items-center gap-1 py-10 text-center sm:py-5`}>
         <Link
           to="/"
-          className="font-display text-4xl font-bold tracking-tight text-navy lg:text-5xl"
+          className="font-display text-5xl font-bold tracking-tight text-navy sm:text-7xl lg:text-7xl"
         >
           Dispatch
         </Link>
-        <p className="font-display text-sm italic text-meta">A better way to read the news</p>
+        <p className="font-display text-base italic text-meta sm:text-lg">
+          A better way to read the news
+        </p>
       </div>
 
       <nav
-        className={`${wrap} scrollbar-hide flex gap-1 overflow-x-auto pb-3`}
+        className={`${wrap} scrollbar-hide flex gap-1 overflow-x-auto border-t border-rule pb-3 pt-2 sm:justify-center`}
         aria-label="Sections"
       >
         {SECTIONS.map((section) => {

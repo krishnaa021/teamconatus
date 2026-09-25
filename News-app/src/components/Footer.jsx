@@ -47,6 +47,11 @@ export default function Footer() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link to="/about" className={linkClass}>
+                About
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

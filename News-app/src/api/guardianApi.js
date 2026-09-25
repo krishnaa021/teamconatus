@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-
 const API_KEY = import.meta.env.VITE_GUARDIAN_API_KEY
 
 const client = axios.create({
@@ -33,10 +32,6 @@ export async function searchArticles({ query = '', section = '', page = 1, pageS
   }
 }
 
-/**
- * Fetch one article's full content by its Guardian id
- * (the id looks like "world/2026/sep/12/some-headline-slug").
- */
 export async function fetchArticleById(id) {
   const { data } = await client.get(`/${id}`, {
     params: {
