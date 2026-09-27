@@ -15,9 +15,9 @@ export default function Header() {
   const activeSection = searchParams.get('section') || ''
 
   return (
-    <header className="border-b border-rule bg-paper">
+    <header className="border-b border-rule bg-navy text-paper">
       <div
-        className={`${wrap} flex justify-between border-b border-rule py-2.5 text-xs text-meta`}
+        className={`${wrap} flex justify-between border-b border-rule py-2.5 text-xs `}
       >
         <span>{today}</span>
         <span className="hidden sm:inline">Powered by the Guardian Open Platform</span>
@@ -26,11 +26,11 @@ export default function Header() {
       <div className={`${wrap} flex flex-col items-center gap-1 py-10 text-center sm:py-5`}>
         <Link
           to="/"
-          className="font-display text-5xl font-bold tracking-tight text-navy sm:text-7xl lg:text-7xl"
+          className="font-display text-5xl font-bold tracking-tight text-paper sm:text-7xl lg:text-7xl"
         >
           Dispatch
         </Link>
-        <p className="font-display text-base italic text-meta sm:text-lg">
+        <p className="font-display text-base italic sm:text-lg">
           A better way to read the news
         </p>
       </div>
@@ -47,7 +47,7 @@ export default function Header() {
               key={section.id || 'all'}
               to={to}
               className={
-                'flex-none whitespace-nowrap border-b-2 px-3.5 py-1.5 text-sm font-semibold hover:text-navy ' +
+                'flex-none whitespace-nowrap border-b-2 px-3.5 py-1.5 text-sm text-paper font-semibold hover:font-bold ' +
                 (isActive ? 'border-navy text-navy' : 'border-transparent text-ink-soft')
               }
             >
