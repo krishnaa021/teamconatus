@@ -120,7 +120,6 @@ npm run preview
   enough for this app.
 - The email on the Contact page (`src/pages/Contact.jsx`) is a placeholder —
   swap it for a real one before sharing the site.
-```
 
 ## Live Demo
 
